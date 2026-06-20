@@ -1,0 +1,41 @@
+koshiro_aoki:
+  first_name: Koshiro
+  last_name: Aoki
+  is_me: true
+itsuki_hamada:
+  first_name: Itsuki
+  last_name: Hamada
+naho_orita:
+  first_name: Naho
+  last_name: Orita
+daisuke_kawahara:
+  first_name: Daisuke
+  last_name: Kawahara
+hiromu_sakai:
+  first_name: Hiromu
+  last_name: Sakai
+ryota_takatsuki:
+  first_name: Ryota
+  last_name: Takatsuki
+gouki_minegishi:
+  first_name: Gouki
+  last_name: Minegishi
+yusuke_haruki:
+  first_name: Yusuke
+  last_name: Haruki
+sebastian_zwirner:
+  first_name: Sebastian
+  last_name: Zwirner
+wentao_hu:
+  first_name: Wentao
+  last_name: Hu
+hakaze_cho:
+  first_name: Hakaze
+  last_name: Cho
+
+# Example
+# keunhong:
+#   first_name: Keunhong
+#   last_name: Park
+#   website: https://keunhong.com
+#   is_me: true

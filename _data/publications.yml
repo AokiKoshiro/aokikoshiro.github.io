@@ -1,0 +1,87 @@
+- id: brain-lm-crosscoders
+  selected: true
+  type: workshop
+  title: "Crosscoders Identify Shared or Specific Features between the Human Brain and Language Models"
+  venue: "Mechanistic Interpretability Workshop @ ICML 2026"
+  year: 2026
+  link: "https://openreview.net/forum?id=07WI8MV4iP"
+  image: brain_lm_crosscoders.png
+  authors:
+    - koshiro_aoki
+    - itsuki_hamada
+    - naho_orita
+    - daisuke_kawahara
+    - hiromu_sakai
+
+- id: in-context-neurofeedback
+  selected: true
+  type: workshop
+  title: "In-Context Neurofeedback: Can Large Language Models Control Their Internal Representations through Privileged Access?"
+  venue: "Trustworthy AI for Good (AI4GOOD) Workshop @ ICML 2026"
+  year: 2026
+  link: "https://openreview.net/forum?id=3g6jrASugZ"
+  image: in_context_neurofeedback.png
+  authors:
+    - koshiro_aoki
+    - ryota_takatsuki
+    - gouki_minegishi
+    - yusuke_haruki
+    - daisuke_kawahara
+  awards:
+    - "Spotlight"
+
+- id: sae-language-steering
+  type: workshop
+  title: "Evaluating the Impact of SAE-based Language Steering on LLM Performance"
+  venue: "EACL 2026 Student Research Workshop"
+  year: 2026
+  link: "https://aclanthology.org/2026.eacl-srw.43/"
+  authors:
+    - sebastian_zwirner
+    - wentao_hu
+    - koshiro_aoki
+    - daisuke_kawahara
+
+- id: simulation-theory-tom
+  selected: true
+  type: workshop
+  title: "Testing Simulation Theory in LLMs' Theory of Mind"
+  venue: "IJCNLP-AACL 2025 Student Research Workshop"
+  year: 2025
+  link: "https://aclanthology.org/2025.ijcnlp-srw.9/"
+  image: simulation_theory_tom.png
+  authors:
+    - koshiro_aoki
+    - daisuke_kawahara
+  awards:
+    - "Oral"
+
+- id: mech-interp-survey
+  type: domestic-journal
+  title: "Mechanistic Interpretability: A New Trend in Interpretability Research"
+  venue: "Transactions of the Japanese Society for Artificial Intelligence, in press"
+  year: 2026
+  authors:
+    - koshiro_aoki
+    - ryota_takatsuki
+    - gouki_minegishi
+    - hakaze_cho
+  awards:
+    - "Best Paper Award"
+
+# Example
+# - id: illuminerf
+#   title: "IllumiNeRF 3D Relighting without Inverse Rendering"
+#   venue: NeurIPS, 2024
+#   description: "3D relighting by distilling samples from a 2D image relighting diffusion model into a latent-variable NeRF."
+#   project_page: https://illuminerf.github.io
+#   arxiv: 2406.06527
+#   image: illuminerf_before.jpg
+#   image_mouseover: illuminerf_after.mp4
+#   authors:
+#     - xiaomingzhao
+#     - pratuls
+#     - dorverbin
+#     - keunhong
+#     - rmbrualla
+#     - phenzler

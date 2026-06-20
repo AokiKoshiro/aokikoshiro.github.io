@@ -1,0 +1,17 @@
+- type: conference
+  label: Conference
+
+- type: journal
+  label: Journal
+
+- type: workshop
+  label: Workshop
+
+- type: domestic-conference
+  label: Domestic Conference
+
+- type: domestic-journal
+  label: Domestic Journal
+
+- type: preprint
+  label: Preprints

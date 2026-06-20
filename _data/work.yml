@@ -1,0 +1,17 @@
+- company: Research and Development Center for Large Language Models, National Institute of Informatics (NII)
+  description: >-
+    Technical Assistant<br />
+    Research on bottom-up interpretability of training dynamics in large language models.
+  dates: "May 2025 - Mar. 2026"
+  location: Tokyo, Japan
+  link: "https://llmc.nii.ac.jp/en/"
+
+# Examples
+# - company: World Labs
+#   description: Founding Member leading pretraining efforts. Creator of RTFM.
+#   dates: "Jan 2024 - (current)"
+#   location: San Francisco, CA
+# - company: Google
+#   description: Research Scientist.
+#   dates: "May 2022 - Jan 2024"
+#   location: San Francisco, CA
