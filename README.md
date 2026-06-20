@@ -1,4 +1,4 @@
-# koshiro.github.io
+# aokikoshiro.github.io
 
 This website is built using [this template](https://github.com/keunhong/keunhong.github.io) created by Keunhong Park.
 

@@ -27,7 +27,7 @@ description: |
   I'm studying the internal mechanisms of large language models and the relationship between artificial and human intelligence.
   I am currently interested in introspection and metacognition in artificial intelligence.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://koshiro.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://aokikoshiro.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 x_username: KsrAoki
 github_username: AokiKoshiro
 google_scholar: yD8ua-sAAAAJ
