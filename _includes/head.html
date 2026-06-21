@@ -6,6 +6,7 @@
 {% assign image = site.social_image | absolute_url %}
 <title>{% if title == site.title %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ description | escape }}">
+<meta name="author" content="{{ site.name | escape }}">
 <link rel="canonical" href="{{ url }}">
 <meta name="robots" content="index, follow">
 
@@ -26,6 +27,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "{{ site.name }}",
+  "alternateName": "{{ site.ja_name }}",
   "url": "{{ site.url }}",
   "email": "mailto:{{ site.email }}",
   "jobTitle": "{{ site.position }}",
