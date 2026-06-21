@@ -26,6 +26,7 @@ description: |
   I am a M.S. student in Computer Science at Waseda University.
   I'm studying the internal mechanisms of large language models and the relationship between artificial and human intelligence.
   I am currently interested in introspection and metacognition in artificial intelligence.
+social_image: /images/portrait.jpg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://aokikoshiro.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 x_username: KsrAoki

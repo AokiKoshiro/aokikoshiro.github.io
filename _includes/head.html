@@ -1,7 +1,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title | default: site.title }}</title>
-<meta name="description" content="{{ page.description | default: site.description }}">
+{% assign title = page.title | default: site.title %}
+{% assign description = page.description | default: site.description | strip_html | normalize_whitespace %}
+{% assign url = page.url | absolute_url %}
+{% assign image = site.social_image | absolute_url %}
+<title>{% if title == site.title %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ description | escape }}">
+<link rel="canonical" href="{{ url }}">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ title | escape }}">
+<meta property="og:description" content="{{ description | escape }}">
+<meta property="og:url" content="{{ url }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:image" content="{{ image }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title | escape }}">
+<meta name="twitter:description" content="{{ description | escape }}">
+<meta name="twitter:image" content="{{ image }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.name }}",
+  "url": "{{ site.url }}",
+  "email": "mailto:{{ site.email }}",
+  "jobTitle": "{{ site.position }}",
+  "sameAs": [
+    "https://scholar.google.com/citations?user={{ site.google_scholar }}",
+    "https://github.com/{{ site.github_username }}",
+    "https://www.linkedin.com/in/{{ site.linkedin_username }}",
+    "https://x.com/{{ site.x_username }}"
+  ]
+}
+</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
