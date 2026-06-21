@@ -1,22 +1,22 @@
-<div class="flex flex-col md:flex-row gap-6 py-6">
+<div class="publication flex flex-col md:flex-row gap-6 py-6">
   <!-- Thumbnail -->
   <div class="w-full md:w-1/6 flex-shrink-0">
-    <div class="publication-mousecell relative overflow-hidden rounded-lg aspect-square">
+    <a href="{{ include.pub.link }}" class="publication-hit publication-thumb-frame relative block overflow-hidden rounded-lg aspect-square no-underline" aria-label="{{ include.pub.title }}">
       <img src="{{ '/images/' | append: include.pub.image | relative_url }}"
            alt="{{ include.pub.title }}"
-           class="w-full h-full object-cover">
+           class="publication-img {% if include.pub.image_mouseover %}publication-img-has-video{% endif %} w-full h-full object-cover">
       {% if include.pub.image_mouseover %}
       <video src="{{ '/images/' | append: include.pub.image_mouseover | relative_url }}"
-             class="absolute inset-0 w-full h-full object-cover hidden"
+             class="publication-video absolute inset-0 w-full h-full object-cover"
              autoplay loop muted playsinline></video>
       {% endif %}
-    </div>
+    </a>
   </div>
 
   <!-- Content -->
   <div class="flex-1">
     <h3 class="font-serif text-xl font-semibold">
-      <a href="{{ include.pub.link }}" class="text-text hover:text-accent no-underline">
+      <a href="{{ include.pub.link }}" class="publication-hit publication-title text-text no-underline">
         {{ include.pub.title }}
       </a>
     </h3>

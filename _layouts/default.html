@@ -10,22 +10,40 @@
   </main>
   {% include footer.html %}
 
-  <!-- Mouseover video toggle script -->
+  <!-- Publication hover and scroll state -->
   <script>
-    document.querySelectorAll('.publication-mousecell').forEach(function(el) {
-      var video = el.querySelector('video');
-      var img = el.querySelector('img');
-      if (video && img) {
+    document.querySelectorAll('.publication').forEach(function(pub) {
+      pub.querySelectorAll('.publication-hit').forEach(function(el) {
         el.addEventListener('mouseenter', function() {
-          video.classList.remove('hidden');
-          img.classList.add('hidden');
+          pub.classList.add('is-hover');
         });
         el.addEventListener('mouseleave', function() {
-          video.classList.add('hidden');
-          img.classList.remove('hidden');
+          pub.classList.remove('is-hover');
         });
-      }
+        el.addEventListener('focusin', function() {
+          pub.classList.add('is-hover');
+        });
+        el.addEventListener('focusout', function() {
+          pub.classList.remove('is-hover');
+        });
+      });
     });
+
+    var touch = window.matchMedia('(hover: none), (pointer: coarse), (max-width: 1024px)');
+    if (touch.matches && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          entry.target.classList.toggle('is-scroll', entry.isIntersecting);
+        });
+      }, {
+        rootMargin: '-35% 0px -35% 0px',
+        threshold: 0
+      });
+
+      document.querySelectorAll('.publication').forEach(function(pub) {
+        observer.observe(pub);
+      });
+    }
   </script>
 </body>
 </html>

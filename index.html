@@ -26,7 +26,7 @@ title: Koshiro Aoki
         <!-- Links -->
         <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
           <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            <i class="bi bi-mortarboard mr-1.5"></i>
+            <i class="bi bi-mortarboard-fill mr-1.5"></i>
           </a>
 
           <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
@@ -75,5 +75,9 @@ title: Koshiro Aoki
     {% for pub in selected_publications %}
       {% include publication.html pub=pub %}
     {% endfor %}
+    <a href="{{ '/cv/#publications' | relative_url }}" class="btn-outline">
+      <i class="bi bi-journal-text"></i>
+      Other Publications
+    </a>
   </div>
 </section>

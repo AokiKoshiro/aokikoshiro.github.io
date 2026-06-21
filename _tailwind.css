@@ -97,6 +97,79 @@
   color: var(--color-link-hover);
 }
 
+.cv-link {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: color 180ms ease, background-size 180ms ease;
+}
+
+.cv-link:hover {
+  background-size: 100% 1px;
+}
+
+.publication-title {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: color 180ms ease, background-size 180ms ease;
+}
+
+.publication-thumb-frame {
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.publication-video {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.publication-img {
+  transition: opacity 180ms ease;
+}
+
+.publication.is-hover .publication-title,
+.publication.is-scroll .publication-title {
+  color: var(--color-accent);
+  background-size: 100% 1px;
+}
+
+.publication.is-hover .publication-thumb-frame,
+.publication.is-scroll .publication-thumb-frame {
+  transform: translateY(3px) scale(0.985);
+  filter: brightness(0.96);
+}
+
+.publication.is-hover .publication-video,
+.publication.is-scroll .publication-video {
+  opacity: 1;
+}
+
+.publication.is-hover .publication-img-has-video,
+.publication.is-scroll .publication-img-has-video {
+  opacity: 0;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
 /* Print styles */
 @media print {
   html, body {

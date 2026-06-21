@@ -8,7 +8,7 @@ title: CV - Koshiro Aoki
   <div class="flex-1">
     <h1 class="font-display text-3xl md:text-4xl font-semibold text-text">{{ site.name }}</h1>
     <p class="text-text-body text-lg mt-1">{{ site.position }}</p>
-    <a href="{{ '/assets/cv_koshiro_aoki.pdf' | relative_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 px-3 py-1.5 border border-border text-sm font-sans text-text no-underline hover:bg-surface-muted print:hidden">
+    <a href="{{ '/assets/cv_koshiro_aoki.pdf' | relative_url }}" target="_blank" rel="noopener" class="btn-outline print:hidden">
       <i class="bi bi-file-earmark-pdf"></i>
       View PDF
     </a>
@@ -49,7 +49,7 @@ title: CV - Koshiro Aoki
 </header>
 
 <!-- Research Interests -->
-<section class="mt-8">
+<section id="research-interests" class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Research Interests</h2>
   <p class="text-text-body">
     {% for interest in site.data.interests %}{{ interest }}{% unless forloop.last %}<span class="mx-2">·</span>{% endunless %}{% endfor %}
@@ -57,7 +57,7 @@ title: CV - Koshiro Aoki
 </section>
 
 <!-- Education -->
-<section class="mt-8">
+<section id="education" class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Education</h2>
   {% for school in site.data.education %}
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
@@ -74,13 +74,13 @@ title: CV - Koshiro Aoki
 </section>
 
 <!-- Work -->
-<section class="mt-8">
+<section id="work" class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Work Experience</h2>
   {% for job in site.data.work %}
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
     <div class="flex-1">
       <p class="font-semibold">
-        {% if job.link %}<a href="{{ job.link }}" class="text-text hover:text-accent no-underline">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
+        {% if job.link %}<a href="{{ job.link }}" class="cv-link text-text hover:text-accent no-underline">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
       </p>
       <p class="text-text-body text-sm">{{ job.description }}</p>
     </div>
@@ -93,7 +93,7 @@ title: CV - Koshiro Aoki
 </section>
 
 <!-- Publications -->
-<section class="mt-8">
+<section id="publications" class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Publications</h2>
 
   {% for group in site.data.publication_groups %}
@@ -104,7 +104,7 @@ title: CV - Koshiro Aoki
     <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
       <div class="flex-1">
         <p class="font-semibold">
-          {% if publication.link %}<a href="{{ publication.link }}" class="text-text hover:text-accent no-underline">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
+          {% if publication.link %}<a href="{{ publication.link }}" class="cv-link text-text hover:text-accent no-underline">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
         </p>
         <p class="text-text-body text-sm mt-0.5">
           {% for author_id in publication.authors %}
@@ -138,13 +138,13 @@ title: CV - Koshiro Aoki
 </section>
 
 <!-- Awards -->
-<section class="mt-8">
+<section id="awards" class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Honors and Awards</h2>
   {% for award in site.data.awards %}
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
     <div class="flex-1">
       <p class="font-semibold">
-        {% if award.link %}<a href="{{ award.link }}" class="text-text hover:text-accent no-underline">{{ award.title }}</a>{% else %}{{ award.title }}{% endif %}
+        {% if award.link %}<a href="{{ award.link }}" class="cv-link text-text hover:text-accent no-underline">{{ award.title }}</a>{% else %}{{ award.title }}{% endif %}
       </p>
       <p class="text-text-body text-sm"><em>{{ award.venue }}</em></p>
     </div>
