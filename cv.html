@@ -4,7 +4,7 @@ title: CV
 ---
 
 <!-- Header -->
-<header class="flex flex-col md:flex-row print:flex-row md:items-center print:items-center gap-6 pb-6 border-b border-border-subtle">
+<header class="flex flex-col md:flex-row print:flex-row md:items-center print:items-center gap-6">
   <div class="flex-1">
     <h1 class="font-display text-3xl md:text-4xl font-semibold text-text">{{ site.name }}</h1>
     <p class="text-text-body text-lg mt-1">{{ site.position }}</p>
@@ -49,15 +49,15 @@ title: CV
 </header>
 
 <!-- Research Interests -->
-<section id="research-interests" class="mt-8">
+<section id="research-interests" class="mt-6 pt-6 border-t border-border-subtle">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Research Interests</h2>
   <p class="text-text-body">
-    {% for interest in site.data.interests %}{{ interest }}{% unless forloop.last %}<span class="mx-2">·</span>{% endunless %}{% endfor %}
+    {% for interest in site.data.interests %}<span class="whitespace-nowrap">{{ interest }}</span>{% unless forloop.last %}&nbsp;| {% endunless %}{% endfor %}
   </p>
 </section>
 
 <!-- Education -->
-<section id="education" class="mt-8">
+<section id="education" class="mt-6 pt-6 border-t border-border-subtle">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Education</h2>
   {% for school in site.data.education %}
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
@@ -77,7 +77,7 @@ title: CV
 </section>
 
 <!-- Work -->
-<section id="work" class="mt-8">
+<section id="work" class="mt-6 pt-6 border-t border-border-subtle">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Work Experience</h2>
   {% for job in site.data.work %}
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
@@ -97,13 +97,13 @@ title: CV
 </section>
 
 <!-- Publications -->
-<section id="publications" class="mt-8">
+<section id="publications" class="mt-6 pt-6 border-t border-border-subtle">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Publications</h2>
 
   {% for group in site.data.publication_groups %}
     {% assign group_pubs = site.data.publications | where: "type", group.type %}
     {% if group_pubs.size > 0 %}
-    <h3 class="text-lg font-semibold text-text mb-3">{{ group.label }}</h3>
+    <h3 class="text-xl font-semibold text-text mb-3">{{ group.label }}</h3>
     {% for publication in group_pubs %}
     <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
       <div class="flex-1">
@@ -142,7 +142,7 @@ title: CV
 </section>
 
 <!-- Awards -->
-<section id="awards" class="mt-8">
+<section id="awards" class="mt-6 pt-6 border-t border-border-subtle">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Honors and Awards</h2>
   {% for award in site.data.awards %}
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
