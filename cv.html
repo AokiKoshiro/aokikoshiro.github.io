@@ -80,7 +80,7 @@ title: CV - Koshiro Aoki
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
     <div class="flex-1">
       <p class="font-semibold">
-        {% if job.link %}<a href="{{ job.link }}" class="text-text hover:text-accent no-underline">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
+        {% if job.link %}<a href="{{ job.link }}" class="cv-link text-text hover:text-accent no-underline">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
       </p>
       <p class="text-text-body text-sm">{{ job.description }}</p>
     </div>
@@ -104,7 +104,7 @@ title: CV - Koshiro Aoki
     <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
       <div class="flex-1">
         <p class="font-semibold">
-          {% if publication.link %}<a href="{{ publication.link }}" class="text-text hover:text-accent no-underline">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
+          {% if publication.link %}<a href="{{ publication.link }}" class="cv-link text-text hover:text-accent no-underline">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
         </p>
         <p class="text-text-body text-sm mt-0.5">
           {% for author_id in publication.authors %}
@@ -144,7 +144,7 @@ title: CV - Koshiro Aoki
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
     <div class="flex-1">
       <p class="font-semibold">
-        {% if award.link %}<a href="{{ award.link }}" class="text-text hover:text-accent no-underline">{{ award.title }}</a>{% else %}{{ award.title }}{% endif %}
+        {% if award.link %}<a href="{{ award.link }}" class="cv-link text-text hover:text-accent no-underline">{{ award.title }}</a>{% else %}{{ award.title }}{% endif %}
       </p>
       <p class="text-text-body text-sm"><em>{{ award.venue }}</em></p>
     </div>
