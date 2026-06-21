@@ -131,24 +131,24 @@
 }
 
 .publication.is-hover .publication-title,
-.publication.is-scroll .publication-title {
+.publication.is-press .publication-title {
   color: var(--color-accent);
   background-size: 100% 1px;
 }
 
 .publication.is-hover .publication-thumb-frame,
-.publication.is-scroll .publication-thumb-frame {
+.publication.is-press .publication-thumb-frame {
   transform: translateY(3px) scale(0.985);
   filter: brightness(0.96);
 }
 
 .publication.is-hover .publication-video,
-.publication.is-scroll .publication-video {
+.publication.is-press .publication-video {
   opacity: 1;
 }
 
 .publication.is-hover .publication-img-has-video,
-.publication.is-scroll .publication-img-has-video {
+.publication.is-press .publication-img-has-video {
   opacity: 0;
 }
 
