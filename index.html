@@ -8,10 +8,20 @@ title: Koshiro Aoki
   <div class="max-w-4xl mx-auto px-6">
     <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start gap-8">
       <!-- Portrait -->
-      <div class="flex-shrink-0 rounded-lg overflow-hidden">
-        <img src="{{ '/images/portrait.jpg' | relative_url }}"
-             alt="{{ site.name }}"
-             class="w-48 h-48 md:w-56 md:h-56 object-cover">
+      <div class="portrait-deck flex-shrink-0 w-48 h-48 md:w-56 md:h-56" role="button" tabindex="0"
+           aria-label="Shuffle portrait">
+        <div class="portrait-card">
+          <img src="{{ '/images/portrait.jpg' | relative_url }}" alt="{{ site.name }}">
+        </div>
+        <div class="portrait-card">
+          <video class="portrait-video" poster="{{ '/images/brain_lens.png' | relative_url }}"
+                 muted loop playsinline preload="none">
+            <source src="{{ '/images/brain_lens.mp4' | relative_url }}" type="video/mp4">
+          </video>
+          <button type="button" class="portrait-playpause" aria-label="Play video" aria-pressed="false">
+            <i class="bi bi-play-fill"></i>
+          </button>
+        </div>
       </div>
 
       <!-- Bio -->
@@ -81,3 +91,94 @@ title: Koshiro Aoki
     </a>
   </div>
 </section>
+
+<style>
+  .portrait-deck { --shuffle-duration: 250ms; position: relative; cursor: pointer; user-select: none; outline: none; }
+  .portrait-card {
+    position: absolute; inset: 0;
+    border-radius: 0.5rem; overflow: hidden;
+    background: var(--color-surface, #fff);
+    box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.4);
+    transform-origin: bottom center;
+    transition: transform var(--shuffle-duration) cubic-bezier(0.22, 1, 0.36, 1), opacity var(--shuffle-duration) ease;
+    will-change: transform;
+  }
+  .portrait-card img,
+  .portrait-card .portrait-video { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+  .portrait-playpause {
+    position: absolute; top: 8px; right: 8px; z-index: 10;
+    width: 32px; height: 32px; border-radius: 9999px; border: none;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; background: rgba(0, 0, 0, 0.5); cursor: pointer;
+    font-size: 1rem; line-height: 1; backdrop-filter: blur(4px);
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  .portrait-playpause:hover { background: rgba(0, 0, 0, 0.7); }
+  .portrait-playpause:active { transform: scale(0.92); }
+  /* Stacking: 0 = front, larger = deeper in the deck */
+  .portrait-card[data-pos="0"] { transform: rotate(0deg) translate(0, 0) scale(1); }
+  .portrait-card[data-pos="1"] { transform: rotate(-5deg) translate(-8px, 6px) scale(0.95); }
+  /* Top card is dealt out to the side, then slots back in at the bottom */
+  .portrait-card.shuffle-out {
+    transform: translateX(118%) rotate(14deg);
+    transition: transform var(--shuffle-duration) ease-in;
+    z-index: 50;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .portrait-card, .portrait-card.shuffle-out { transition: none; }
+  }
+</style>
+
+<script>
+  (function () {
+    var deck = document.querySelector('.portrait-deck');
+    if (!deck) return;
+    var cards = Array.prototype.slice.call(deck.querySelectorAll('.portrait-card'));
+    var duration = parseFloat(getComputedStyle(deck).getPropertyValue('--shuffle-duration'));
+    var busy = false;
+
+    function layout() {
+      cards.forEach(function (card, i) {
+        card.dataset.pos = i;
+        card.style.zIndex = cards.length - i;
+      });
+    }
+
+    function shuffle() {
+      if (busy) return;
+      busy = true;
+      var top = cards[0];
+      top.classList.add('shuffle-out');
+      setTimeout(function () {
+        cards.push(cards.shift());
+        layout();
+        top.classList.remove('shuffle-out');
+        busy = false;
+      }, duration);
+    }
+
+    layout();
+    deck.addEventListener('click', shuffle);
+    deck.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); shuffle(); }
+    });
+
+    var video = deck.querySelector('.portrait-video');
+    var btn = deck.querySelector('.portrait-playpause');
+    var icon = btn.querySelector('i');
+
+    function render() {
+      var playing = !video.paused;
+      icon.className = playing ? 'bi bi-pause-fill' : 'bi bi-play-fill';
+      btn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
+      btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (video.paused) video.play(); else video.pause();
+    });
+    video.addEventListener('play', render);
+    video.addEventListener('pause', render);
+  })();
+</script>
