@@ -11,10 +11,19 @@ title: Koshiro Aoki
       <div class="portrait-deck flex-shrink-0 w-48 h-48 md:w-56 md:h-56" role="button" tabindex="0"
            aria-label="Shuffle portrait">
         <div class="portrait-card">
-          <img src="{{ '/images/portrait.webp' | relative_url }}" alt="{{ site.name }}">
+          <img src="{{ '/images/portrait-384.webp' | relative_url }}"
+               srcset="{{ '/images/portrait-384.webp' | relative_url }} 384w,
+                       {{ '/images/portrait-640.webp' | relative_url }} 640w,
+                       {{ '/images/portrait-960.webp' | relative_url }} 960w"
+               sizes="(min-width: 768px) 224px, 192px"
+               alt="{{ site.name }}"
+               width="384"
+               height="384"
+               decoding="async"
+               fetchpriority="high">
         </div>
         <div class="portrait-card">
-          <video class="portrait-video" poster="{{ '/images/brain_lens.webp' | relative_url }}"
+          <video class="portrait-video" poster="{{ '/images/brain_lens-640.webp' | relative_url }}"
                  muted loop playsinline preload="none">
             <source src="{{ '/images/brain_lens.mp4' | relative_url }}" type="video/mp4">
           </video>

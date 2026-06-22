@@ -2,8 +2,18 @@
   <!-- Thumbnail -->
   <div class="w-full md:w-1/6 flex-shrink-0">
     <a href="{{ include.pub.link }}" class="publication-hit publication-thumb-frame relative block overflow-hidden rounded-lg aspect-square no-underline" aria-label="{{ include.pub.title }}">
-      <img src="{{ '/images/' | append: include.pub.image | relative_url }}"
+      {% assign image_base = include.pub.image | remove: '.webp' %}
+      <img src="{{ '/images/' | append: image_base | append: '-640.webp' | relative_url }}"
+           srcset="{{ '/images/' | append: image_base | append: '-384.webp' | relative_url }} 384w,
+                   {{ '/images/' | append: image_base | append: '-640.webp' | relative_url }} 640w,
+                   {{ '/images/' | append: image_base | append: '-960.webp' | relative_url }} 960w,
+                   {{ '/images/' | append: image_base | append: '-1280.webp' | relative_url }} 1280w"
+           sizes="(min-width: 768px) 141px, calc(100vw - 48px)"
            alt="{{ include.pub.title }}"
+           width="640"
+           height="640"
+           loading="lazy"
+           decoding="async"
            class="publication-img {% if include.pub.image_mouseover %}publication-img-has-video{% endif %} w-full h-full object-cover">
       {% if include.pub.image_mouseover %}
       <video src="{{ '/images/' | append: include.pub.image_mouseover | relative_url }}"
