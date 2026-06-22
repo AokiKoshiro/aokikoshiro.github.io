@@ -5,7 +5,7 @@
   venue: "Mechanistic Interpretability Workshop @ ICML 2026"
   year: 2026
   link: "https://openreview.net/forum?id=07WI8MV4iP"
-  image: brain_lm_crosscoders.png
+  image: brain_lm_crosscoders.webp
   authors:
     - koshiro_aoki
     - itsuki_hamada
@@ -20,7 +20,7 @@
   venue: "Trustworthy AI for Good (AI4GOOD) Workshop @ ICML 2026"
   year: 2026
   link: "https://openreview.net/forum?id=3g6jrASugZ"
-  image: in_context_neurofeedback.png
+  image: in_context_neurofeedback.webp
   authors:
     - koshiro_aoki
     - ryota_takatsuki
@@ -49,7 +49,7 @@
   venue: "IJCNLP-AACL 2025 Student Research Workshop"
   year: 2025
   link: "https://aclanthology.org/2025.ijcnlp-srw.9/"
-  image: simulation_theory_tom.png
+  image: simulation_theory_tom.webp
   authors:
     - koshiro_aoki
     - daisuke_kawahara
