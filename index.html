@@ -76,7 +76,7 @@ title: Koshiro Aoki
   <!-- Background with faded edges -->
   <div class="absolute inset-0 bg-surface-muted" style="mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);"></div>
   <div class="relative max-w-4xl mx-auto px-6">
-    <h2 class="font-display text-2xl font-semibold text-text mb-8">Highlights</h2>
+    <h2 class="text-2xl font-semibold text-text mb-8">Highlights</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {% for highlight in site.data.highlights %}
         {% include highlight.html h=highlight %}
@@ -89,7 +89,7 @@ title: Koshiro Aoki
 <!-- Publications Section -->
 <section class="py-8 md:py-12 bg-surface">
   <div class="max-w-4xl mx-auto px-6">
-    <h2 class="font-display text-2xl font-semibold text-text mb-6">Selected Publications</h2>
+    <h2 class="text-2xl font-semibold text-text mb-6">Selected Publications</h2>
     {% assign selected_publications = site.data.publications | where: "selected", true %}
     {% for pub in selected_publications %}
       {% include publication.html pub=pub %}
