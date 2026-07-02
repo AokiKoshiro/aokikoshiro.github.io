@@ -3,7 +3,7 @@
 
 @theme {
   /* Surface colors */
-  --color-surface: #fffcf6;
+  --color-surface: #fafcfd;
   --color-surface-alt: #fff9ef;
   --color-surface-muted: #f9f2e7;
   --color-accent: #1d697a;
@@ -163,6 +163,7 @@
   border: 1px solid var(--color-border);
   font-family: var(--font-sans);
   font-size: 0.875rem;
+  background-color: white;
   color: var(--color-text);
   text-decoration: none;
 }
