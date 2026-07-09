@@ -2,6 +2,30 @@ koshiro_aoki:
   first_name: Koshiro
   last_name: Aoki
   is_me: true
+masaru_isonuma:
+  first_name: Masaru
+  last_name: Isonuma
+yusuke_oda:
+  first_name: Yusuke
+  last_name: Oda
+hirokazu_kiyomaru:
+  first_name: Hirokazu
+  last_name: Kiyomaru
+takashi_kodama:
+  first_name: Takashi
+  last_name: Kodama
+chaoran_liu:
+  first_name: Chaoran
+  last_name: Liu
+yohei_oseki:
+  first_name: Yohei
+  last_name: Oseki
+yusuke_miyao:
+  first_name: Yusuke
+  last_name: Miyao
+max_muller_eberstein:
+  first_name: Max
+  last_name: Müller-Eberstein
 itsuki_hamada:
   first_name: Itsuki
   last_name: Hamada

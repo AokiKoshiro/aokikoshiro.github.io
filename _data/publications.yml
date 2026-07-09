@@ -1,3 +1,23 @@
+- id: bottomup-pretraining-dynamics
+  selected: true
+  type: conference
+  title: "Bottom-Up Interpretability of Pretraining Dynamics via Loss Curve Decomposition"
+  venue: "Third Conference on Language Modeling (COLM 2026)"
+  year: 2026
+  link: "https://openreview.net/forum?id=QDJDIeOCHF"
+  image: bottomup_pretraining_dynamics.webp
+  authors:
+    - koshiro_aoki
+    - masaru_isonuma
+    - yusuke_oda
+    - hirokazu_kiyomaru
+    - takashi_kodama
+    - chaoran_liu
+    - yohei_oseki
+    - yusuke_miyao
+    - max_muller_eberstein
+    - daisuke_kawahara
+
 - id: brain-lm-crosscoders
   selected: true
   type: workshop
@@ -43,7 +63,6 @@
     - daisuke_kawahara
 
 - id: simulation-theory-tom
-  selected: true
   type: workshop
   title: "Testing Simulation Theory in LLMs' Theory of Mind"
   venue: "IJCNLP-AACL 2025 Student Research Workshop"
