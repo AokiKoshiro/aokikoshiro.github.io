@@ -78,7 +78,7 @@
 - id: mech-interp-survey
   type: domestic-journal
   title: "Mechanistic Interpretability: A New Trend in Interpretability Research"
-  venue: "Transactions of the Japanese Society for Artificial Intelligence, in press"
+  venue: "Transactions of the Japanese Society for Artificial Intelligence"
   year: 2026
   link: "https://doi.org/10.1527/tjsai.41-4_AN40-D"
   authors:
