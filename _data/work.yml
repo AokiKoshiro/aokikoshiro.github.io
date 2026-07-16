@@ -1,3 +1,19 @@
+- company: Waseda University
+  description: >-
+    Research Assistant<br />
+    Research on differences between the internal representations of the human brain and language models as part of a <a href="https://www.jst.go.jp/kisoken/crest/en/">JST CREST project</a>.
+  dates: "Apr. 2026 - Present"
+  location: Tokyo, Japan
+  link: "https://www.waseda.jp/top/en/"
+
+- company: The University of Tokyo
+  description: >-
+    Research Contractor<br />
+    Research on interpretability and defenses of adversarial attacks on robot foundation models.
+  dates: "May 2025 - Present"
+  location: Tokyo, Japan
+  link: "https://www.u-tokyo.ac.jp/en/"
+
 - company: Research and Development Center for Large Language Models, National Institute of Informatics (NII)
   description: >-
     Technical Assistant<br />
