@@ -3,19 +3,17 @@
 
 @theme {
   /* Surface colors */
-  --color-surface: #f5fafc;
-  --color-surface-alt: #fff9ef;
-  --color-surface-muted: #f9f2e7;
+  --color-surface: #f6fcfc;
+  --color-surface-muted: #f9f9f9;
   --color-accent: #1d697a;
 
   /* Text colors */
   --color-text: #171717;
   --color-text-body: #404040;
   --color-text-muted: #666666;
-  --color-text-subtle: #a3a3a3;
 
   /* Border colors */
-  --color-border: #e5e5e5;
+  --color-border: #666666;
   --color-border-subtle: #f0f0f0;
 
   /* Link colors */
@@ -163,14 +161,13 @@
   border: 1px solid var(--color-border);
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  background-color: white;
+  background-color: var(--color-surface);
   color: var(--color-text);
   text-decoration: none;
 }
 
 .btn-outline:hover {
   background-color: var(--color-surface-muted);
-  color: var(--color-text);
 }
 
 /* Print styles */
