@@ -9,13 +9,13 @@
   authors:
     - koshiro_aoki
     - masaru_isonuma
+    - max_muller_eberstein
     - yusuke_oda
     - hirokazu_kiyomaru
     - takashi_kodama
     - chaoran_liu
     - yohei_oseki
     - yusuke_miyao
-    - max_muller_eberstein
     - daisuke_kawahara
 
 - id: brain-lm-crosscoders
