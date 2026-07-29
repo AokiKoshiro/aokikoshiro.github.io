@@ -25,8 +25,10 @@ position: M.S. Student in Computer Science, Waseda University
 email: aokikoshiro@akane.waseda.jp
 description: |
   I am a M.S. student in Computer Science at Waseda University.
-  I'm studying the internal mechanisms of large language models and the relationship between artificial and human intelligence.
-  I am currently interested in introspection and metacognition in artificial intelligence.
+  I love thinking about thinking. This includes the following research interests.
+  - Metacognition: thinking about one's own thinking
+  - Mechanistic Interpretability: thinking about how LLMs think
+  - NeuroAI: thinking about how the brain thinks through AI
 social_image: /images/portrait.webp
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://aokikoshiro.github.io" # the base hostname & protocol for your site, e.g. http://example.com
