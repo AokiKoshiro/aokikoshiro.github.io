@@ -1,3 +1,20 @@
+- id: in-context-neurofeedback
+  selected: true
+  type: conference
+  title: "In-Context Neurofeedback: Can Large Language Models Control Their Internal Representations through Privileged Access?"
+  venue: "The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026 Findings)<br>Trustworthy AI for Good (AI4GOOD) Workshop @ ICML 2026"
+  year: 2026
+  link: "https://openreview.net/forum?id=3g6jrASugZ"
+  image: in_context_neurofeedback.webp
+  authors:
+    - koshiro_aoki
+    - ryota_takatsuki
+    - gouki_minegishi
+    - yusuke_haruki
+    - daisuke_kawahara
+  awards:
+    - "Spotlight"
+
 - id: bottomup-pretraining-dynamics
   selected: true
   type: conference
@@ -17,23 +34,6 @@
     - yohei_oseki
     - yusuke_miyao
     - daisuke_kawahara
-
-- id: in-context-neurofeedback
-  selected: true
-  type: conference
-  title: "In-Context Neurofeedback: Can Large Language Models Control Their Internal Representations through Privileged Access?"
-  venue: "The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026 Findings)<br>Trustworthy AI for Good (AI4GOOD) Workshop @ ICML 2026"
-  year: 2026
-  link: "https://openreview.net/forum?id=3g6jrASugZ"
-  image: in_context_neurofeedback.webp
-  authors:
-    - koshiro_aoki
-    - ryota_takatsuki
-    - gouki_minegishi
-    - yusuke_haruki
-    - daisuke_kawahara
-  awards:
-    - "Spotlight"
 
 - id: brain-lm-crosscoders
   selected: true
