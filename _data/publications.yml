@@ -1,10 +1,10 @@
 - id: in-context-neurofeedback
   selected: true
   type: conference
-  title: "In-Context Neurofeedback: Can Large Language Models Control Their Internal Representations through Privileged Access?"
+  title: "In-Context Neurofeedback: Can LLMs Control Their Internal Representations through Privileged Access?"
   venue: "The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026 Findings)<br>Trustworthy AI for Good (AI4GOOD) Workshop @ ICML 2026"
   year: 2026
-  link: "https://openreview.net/forum?id=3g6jrASugZ"
+  link: "https://arxiv.org/abs/2609.00904"
   image: in_context_neurofeedback.webp
   authors:
     - koshiro_aoki
