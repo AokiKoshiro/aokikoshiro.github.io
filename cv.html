@@ -76,10 +76,10 @@ title: CV
   {% for job in site.data.work %}
   <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
     <div class="flex-1">
-      <p class="font-semibold">
-        {% if job.link %}<a href="{{ job.link }}" class="cv-link text-text hover:text-accent no-underline">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
+      {% if job.role %}<p class="font-semibold">{{ job.role }}</p>{% endif %}
+      <p class="text-text-body text-sm">
+        {% if job.link %}<a href="{{ job.link }}" class="cv-link text-text-body hover:text-accent no-underline">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
       </p>
-      {% if job.role %}<p class="text-text-body text-sm">{{ job.role }}</p>{% endif %}
       <p class="text-text-body text-sm">{{ job.description }}</p>
     </div>
     <div class="text-text-muted text-sm md:text-right flex-shrink-0">

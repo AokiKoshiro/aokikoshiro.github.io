@@ -1,29 +1,29 @@
-- company: "Supervised Program for Alignment Research (SPAR)"
-  role: "Research Fellow"
+- role: "Research Fellow"
+  company: "Supervised Program for Alignment Research (SPAR)"
   description: >-
     Research on <a href="https://sparai.org/projects/f26/recSethyRdYZqNM2O/">introspection in large language models</a>, mentored by Lydia Nottingham and Andrew Tran.
   dates: "Sep. 2026 - Present"
   location: Remote
   link: "https://sparai.org/"
 
-- company: Waseda University
-  role: "Research Assistant"
+- role: "Research Assistant"
+  company: Waseda University
   description: >-
     Research on differences between the internal representations of the human brain and language models as part of a <a href="https://www.jst.go.jp/kisoken/crest/en/">JST CREST project</a>.
   dates: "Apr. 2026 - Present"
   location: Tokyo, Japan
   link: "https://www.waseda.jp/top/en/"
 
-- company: The University of Tokyo
-  role: "Research Contractor"
+- role: "Research Contractor"
+  company: The University of Tokyo
   description: >-
     Research on interpretability and defenses of adversarial attacks on robot foundation models.
   dates: "May 2025 - Present"
   location: Tokyo, Japan
   link: "https://www.u-tokyo.ac.jp/en/"
 
-- company: Research and Development Center for Large Language Models, National Institute of Informatics (NII)
-  role: "Technical Assistant"
+- role: "Technical Assistant"
+  company: Research and Development Center for Large Language Models, National Institute of Informatics (NII)
   description: >-
     Research on bottom-up interpretability of training dynamics in large language models.
   dates: "May 2025 - Mar. 2026"
