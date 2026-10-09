@@ -1,6 +1,6 @@
-<div class="publication flex flex-col md:flex-row gap-6 py-6">
+<div class="publication flex flex-col md:flex-row gap-6 md:gap-8 py-6">
   <!-- Thumbnail -->
-  <div class="w-full md:w-1/6 flex-shrink-0">
+  <div class="w-full md:w-40 flex-shrink-0">
     <a href="{{ include.pub.link }}" class="publication-hit publication-thumb-frame relative block overflow-hidden rounded-lg aspect-square no-underline" aria-label="{{ include.pub.title }}">
       {% assign image_base = include.pub.image | remove: '.webp' %}
       <img src="{{ '/images/' | append: image_base | append: '-640.webp' | relative_url }}"
@@ -8,7 +8,7 @@
                    {{ '/images/' | append: image_base | append: '-640.webp' | relative_url }} 640w,
                    {{ '/images/' | append: image_base | append: '-960.webp' | relative_url }} 960w,
                    {{ '/images/' | append: image_base | append: '-1280.webp' | relative_url }} 1280w"
-           sizes="(min-width: 768px) 141px, calc(100vw - 48px)"
+           sizes="(min-width: 768px) 160px, calc(100vw - 48px)"
            alt="{{ include.pub.title }}"
            width="640"
            height="640"
