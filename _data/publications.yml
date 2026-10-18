@@ -35,6 +35,19 @@
     - yusuke_miyao
     - daisuke_kawahara
 
+- id: vla-adversarial-patch-defense
+  type: workshop
+  title: "Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models"
+  venue: "The Science of Physical AI Safety (SPAIS) Workshop @ CoRL 2026"
+  year: 2026
+  link: "https://arxiv.org/abs/2610.03498"
+  authors:
+    - yukiya_horiba
+    - koshiro_aoki
+    - shunsuke_yasuki
+    - bum_jun_kim
+    - taiki_miyanishi
+
 - id: brain-lm-crosscoders
   selected: true
   type: workshop
@@ -88,19 +101,6 @@
     - hakaze_cho
   awards:
     - "Best Paper Award"
-
-- id: vla-adversarial-patch-defense
-  type: preprint
-  title: "Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models"
-  venue: "arXiv preprint arXiv:2610.03498"
-  year: 2026
-  link: "https://arxiv.org/abs/2610.03498"
-  authors:
-    - yukiya_horiba
-    - koshiro_aoki
-    - shunsuke_yasuki
-    - bum_jun_kim
-    - taiki_miyanishi
 
 # Example
 # - id: illuminerf
